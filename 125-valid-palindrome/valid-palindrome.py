@@ -10,5 +10,4 @@ class Solution:
                 l-=1
             else:
                 return False
-                break
         return True
