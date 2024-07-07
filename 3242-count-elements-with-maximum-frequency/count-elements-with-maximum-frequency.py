@@ -2,7 +2,6 @@ class Solution:
     def maxFrequencyElements(self, nums: List[int]) -> int:
         my_dict={}
         ans=[]
-        prev=0
         res=0
         ctr=0
         for num in nums:
