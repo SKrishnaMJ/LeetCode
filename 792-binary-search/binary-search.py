@@ -3,8 +3,6 @@ class Solution:
         first = 0
         mid=0
         last = len(nums)-1
-        if(len(nums)==1 and nums[0]==target):
-            return 0
         while(first<=last):
             mid=(last-first//2)
             if(target == nums[mid]):
