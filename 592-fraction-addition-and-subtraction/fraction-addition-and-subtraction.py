@@ -15,7 +15,7 @@ class Solution:
         l.append(num)
         for j in range(len(l)):
             ans+=eval(l[j])
-        res=str(Fraction(ans).limit_denominator(3000))
+        res=str(Fraction(ans).limit_denominator())
         if res in ["0","1", "2", "3", "4", "5", "6", "7", "8", "9", "-1", "-2", "-3", "-4", "-5","6", "-7", "-8", "-9"]:
             return res+"/1"
         return res
