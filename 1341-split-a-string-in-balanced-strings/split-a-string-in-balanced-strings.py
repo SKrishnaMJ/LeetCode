@@ -3,7 +3,7 @@ class Solution:
         bal=0
         ctr=0
         for char in s:
-            if char == 'R':
+            if char == 'L':
                 ctr+=1
             else:
                 ctr-=1
