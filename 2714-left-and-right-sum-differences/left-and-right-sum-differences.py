@@ -8,9 +8,6 @@ class Solution:
         for i in range(1,n):
             leftSum[i]=leftSum[i-1]+nums[i-1]
             rightSum[i]=rightSum[i-1]+numsNew[i-1]
-        print(nums)
-        print(leftSum)
-        print(rightSum)
         rightSum=rightSum[::-1]
         for i in range(n):
             ans[i]=abs(leftSum[i]-rightSum[i])
