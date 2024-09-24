@@ -1,9 +1,7 @@
 class Solution:
     def minBitFlips(self, start: int, goal: int) -> int:
-        s=bin(start)
-        s=s[2:]
-        g=bin(goal)
-        g=g[2:]
+        s=bin(start)[2:]
+        g=bin(goal)[2:]
         c=0
         if len(s)>len(g):
             n = len(s)-len(g)
