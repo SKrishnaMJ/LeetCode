@@ -15,17 +15,14 @@ class Solution:
                 res=(ord(num1[i])-ord('0'))+(ord(num2[i])-ord('0'))+c
                 c=res//10
                 res=res%10
-                ans+=str(res)
-                res = ''
-                i += 1
             else:
                 res = (ord(num1[i]) - ord('0')) + (ord(num2[i]) - ord('0'))
                 if res>9:
                     c = res // 10
                     res = res % 10
-                ans += str(res)
-                res = ''
-                i += 1
+            ans += str(res)
+            res = ''
+            i += 1
         if c>0:
             ans+=str(c)
         return ans[::-1]
