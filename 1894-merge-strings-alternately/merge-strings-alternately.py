@@ -1,16 +1,12 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        diffch=''
-        if(len(word2)>len(word1)):
-            diff=len(word2)-len(word1)
-            diffch=word2[len(word2)-diff:]
-        elif(len(word1)>len(word2)):
-            diff=len(word1)-len(word2)
-            diffch = word1[len(word1) - diff:]
-        l=min(len(word1),len(word2))
-        res=''
-        for i in range(l):
-            res=res+word1[i]+word2[i]
-        return res+diffch
-
+        merged=''
+        n=len(word1)
+        m=len(word2)
+        for i in range(min(n,m)):
+            merged+=word1[i]+word2[i]
+        if m>n:
+            return merged+word2[n:]
+        else:
+            return merged+word1[m:]
         
