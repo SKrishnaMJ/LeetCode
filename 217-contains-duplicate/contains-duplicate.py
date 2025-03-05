@@ -1,20 +1,8 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        # my_dict={}
-        # for i in range(len(nums)):
-        #     if nums[i] in my_dict:
-        #         my_dict[nums[i]]+=1
-        #     else:
-        #         my_dict[nums[i]]=1
-        # for k,v in my_dict.items():
-        #     if (v>1):
-        #         return True
-        # return False
-        setx=set()
-        for i in nums:
-            if i in setx:
+        x = dict(Counter(nums))
+        for val in x.values():
+            if val>=2:
                 return True
-            else:
-                setx.add(i)
         return False
         
