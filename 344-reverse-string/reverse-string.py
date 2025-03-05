@@ -4,9 +4,11 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        n=len(s)
-        for i in range(len(s)-1, -1, -1):
-            s.append(s[i])
-            s.pop(i)
+        f=0
+        l=len(s)-1
+        while f<l:
+            s[f], s[l] = s[l], s[f]
+            f+=1
+            l-=1
 
         
