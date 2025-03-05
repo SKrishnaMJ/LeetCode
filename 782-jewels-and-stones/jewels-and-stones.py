@@ -1,9 +1,9 @@
 class Solution:
     def numJewelsInStones(self, jewels: str, stones: str) -> int:
-        ctr=0
-        for i in jewels:
-            for j in stones:
-                if i==j:
-                    ctr+=1
-        return ctr
+        c = dict(Counter(stones))
+        ans=0
+        for j in jewels:
+            if j in c:
+                ans+=c[j]
+        return ans
         
