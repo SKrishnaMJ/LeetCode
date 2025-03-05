@@ -1,10 +1,10 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        i=0
-        l=len(nums)
-        for i in range(l-1):
-            j=i+1
-            for j in range (i+1, l):
-                if ((nums[i] + nums[j]) == target):
-                    return i, j
-                    
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        my_dict={}
+        for i in range(len(nums)):
+            my_dict[nums[i]]=i
+        for i in range(len(nums)):
+            diff = target-nums[i]
+            if diff in my_dict and my_dict[diff]!=i:
+                return [i, my_dict[diff]]
+        
