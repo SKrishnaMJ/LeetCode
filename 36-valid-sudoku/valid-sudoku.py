@@ -1,6 +1,6 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-
+        # use 9 bcause the board is 9x9 matrix
 
         # To check unique elements in all rows
         for i in range(9):
