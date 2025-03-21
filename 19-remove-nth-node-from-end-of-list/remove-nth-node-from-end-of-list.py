@@ -14,7 +14,7 @@ class Solution:
         d = ListNode()
         cur = d
         cur.next = head
-        while head or head.next:
+        while head:
             if c==n:
                 cur.next = head.next
                 break
