@@ -10,8 +10,9 @@ class Solution:
                 if nums[i]==0:
                     c-=1
                 i+=1
-
-
             longest = max(longest, (j-i)+1)
         return longest
+
+
+
         
