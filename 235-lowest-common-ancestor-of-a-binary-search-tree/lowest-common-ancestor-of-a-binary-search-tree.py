@@ -15,4 +15,3 @@ class Solution:
                 cur=cur.right
             else:
                 return cur
-        
