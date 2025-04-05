@@ -6,7 +6,7 @@ class Solution:
         for st in stones:
             heap.append(-st)
             heapq.heapify(heap)
-        while heap and len(heap)>1:
+        while len(heap)>1:
             x = -heapq.heappop(heap)
             y = -heapq.heappop(heap)
             if x != y:
