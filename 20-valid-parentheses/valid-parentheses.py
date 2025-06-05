@@ -2,17 +2,15 @@ class Solution:
     def isValid(self, s: str) -> bool:
         if len(s)==1:
             return False
-        st=[]
-        my_dict = {')':'(', '}':'{',']':'['}
-        for i in s:
-            if i == '(' or i == '[' or i == '{':
-                st.append(i)
+        my_dict = {')':'(',
+        '}':'{',
+        ']':'['}
+        stack = []
+        for i in range(len(s)):
+            if s[i]=='(' or s[i]=='{' or s[i]=='[':
+                stack.append(s[i])
             else:
-                if not st or st.pop()!=my_dict[i]:
+                if not stack or stack.pop()!=my_dict[s[i]]:
                     return False
-        if len(st)!=0:
-            return False
-        else:
-            return True
-
+        return True if len(stack)==0 else False
         
